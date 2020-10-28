@@ -1,0 +1,24 @@
+@import 'Widget.scss';
+
+.container {
+    @extend %widget;
+
+    background: linear-gradient(#3f8ab3, #6ab3d6);
+
+    .temperature {
+        margin: 0;
+        font-weight: 200;
+        font-size: 3.2em;
+    }
+
+    .weather {
+        margin: 0;
+        font-weight: 400;
+        font-size: 18px;
+      }
+
+    .icon {
+        font-size: 1.4em;
+    }
+
+}

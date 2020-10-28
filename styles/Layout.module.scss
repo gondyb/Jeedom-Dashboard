@@ -1,0 +1,12 @@
+.container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 10%;
+    height: 100vh;
+
+    background-image: url("/wwdc6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+}

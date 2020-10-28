@@ -1,0 +1,14 @@
+@import "Widget.scss";
+
+.container {
+    @extend %widget;
+
+    $primary: #3498db;
+    background: linear-gradient($primary, darken($primary, 10));
+
+    .count {
+        margin: 0;
+        font-weight: 200;
+        font-size: 2.6em;
+    }
+}
