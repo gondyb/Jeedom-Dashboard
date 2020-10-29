@@ -4,9 +4,9 @@ import { IconType } from 'react-icons';
 
 type HomeWidgetProps = { 
     deviceName: String, 
-    statusFn: () => Promise<Response>, 
-    onFn: () => Promise<Response>, 
-    offFn: () => Promise<Response>,
+    statusFn: (callback?: (result: string) => void) => void, 
+    onFn: (callback?: (result: string) => void) => void,  
+    offFn: (callback?: (result: string) => void) => void, 
     onIcon: IconType, 
     offIcon: IconType, 
     onColor: string 
@@ -18,11 +18,9 @@ export default function HomeWidget(
     const [status, setStatus] = useState(0);
     
     const checkStatus = () => {
-        statusFn()
-            .then(res => res.text())
-            .then(stat => {
-                setStatus(parseInt(stat))
-            });
+        statusFn((result) => {
+            setStatus(parseInt(result));
+        });
     };
     
     useEffect(() => {

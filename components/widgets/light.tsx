@@ -3,9 +3,9 @@ import {FaLightbulb, FaRegLightbulb} from 'react-icons/fa'
 
 type LightWidgetProps = {
     lightName: string,
-    statusFn: () => Promise<Response>,
-    onFn: () => Promise<Response>,
-    offFn: () => Promise<Response>
+    statusFn: (callback?: (result: string) => void) => void,
+    onFn: (callback?: (result: string) => void) => void,
+    offFn: (callback?: (result: string) => void) => void,
 };
 
 export default function LightWidget({ lightName, statusFn, onFn, offFn }: LightWidgetProps) {
